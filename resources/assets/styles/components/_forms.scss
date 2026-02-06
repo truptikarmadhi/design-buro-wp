@@ -1,0 +1,28 @@
+input {
+    height: 49px;
+    border: 1px solid $color-BCBCBC;
+
+    &.contact-input {
+
+        &::placeholder {
+            color: $white;
+            font-family: "dmsans-medium";
+            font-size: $font14;
+            line-height: $leading16;
+            color: $white;
+        }
+    }
+}
+
+textarea {
+    border: 1px solid $color-BCBCBC;
+    height: 200px;
+
+    &::placeholder {
+        color: $white;
+        font-family: "dmsans-medium";
+        font-size: $font14;
+        line-height: $leading16;
+        color: $white;
+    }
+}

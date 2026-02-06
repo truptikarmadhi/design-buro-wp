@@ -1,0 +1,33 @@
+.privacy-policy-section {
+    .privacy-links {
+        top: 200px;
+
+        li {
+            &.active {
+                a {
+                    opacity: 100%;
+                    padding-left: 18px;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: -7px;
+                    transform: translate(50%, -50%);
+                    width: 12px;
+                    height: 12px;
+                    background-image: url("/wp-content/themes/design-buro/templates/icons/color-arrow.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .policy-content {
+        &:first-child {
+            padding-top: 0px;
+        }
+    }
+}

@@ -1,0 +1,342 @@
+.bg-f07a47 {
+    background-color: $color-f07a47;
+}
+
+.bg-ffffff {
+    background-color: $color-ffffff;
+}
+
+.bg-06556c {
+    background-color: $color-06556c;
+}
+
+.bg-000000 {
+    background-color: $color-000000;
+}
+
+.bg-000b18 {
+    background-color: $color-000b18;
+}
+
+.bg-edf4f3 {
+    background-color: $color-edf4f3;
+}
+
+.bg-268a85 {
+    background-color: $color-268a85;
+}
+
+.bg-00000040 {
+    background-color: $color-00000040;
+}
+
+.bg-3db4c0 {
+    background-color: $color-3db4c0;
+}
+
+//text
+.text-f07a47 {
+    color: $color-f07a47;
+}
+
+.text-white {
+    color: $color-ffffff;
+}
+
+.text-06556c {
+    color: $color-06556c;
+}
+
+.text-000000 {
+    color: $color-000000;
+}
+
+.text-000b18 {
+    color: $color-000b18;
+}
+
+.text-edf4f3 {
+    color: $color-edf4f3;
+}
+
+.text-268a85 {
+    color: $color-268a85;
+}
+
+.text-3db4c0 {
+    color: $color-3db4c0;
+}
+
+//fonts
+.font61 {
+    font-size: $font61;
+}
+
+.font48 {
+    font-size: $font48;
+}
+
+.font35 {
+    font-size: $font35;
+}
+
+.font32 {
+    font-size: $font32;
+}
+
+.font29 {
+    font-size: $font29;
+}
+
+.font26 {
+    font-size: $font26;
+}
+
+.font25 {
+    font-size: $font25;
+}
+
+.font24 {
+    font-size: $font24;
+}
+
+.font22 {
+    font-size: $font22;
+}
+
+.font21 {
+    font-size: $font21;
+}
+
+.font16 {
+    font-size: $font16;
+}
+
+.font15 {
+    font-size: $font15;
+}
+
+.font14 {
+    font-size: $font14;
+}
+
+.font12 {
+    font-size: $font12;
+}
+
+//leading
+.leading16 {
+    line-height: $leading16;
+}
+
+.leading61 {
+    line-height: $leading61;
+}
+
+.leading53 {
+    line-height: $leading53;
+}
+
+.leading46 {
+    line-height: $leading46;
+}
+
+.leading44 {
+    line-height: $leading44;
+}
+
+.leading35 {
+    line-height: $leading35;
+}
+
+.leading34 {
+    line-height: $leading34;
+}
+
+.leading32 {
+    line-height: $leading32;
+}
+
+.leading30 {
+    line-height: $leading30;
+}
+
+.leading29 {
+    line-height: $leading29;
+}
+
+.leading28 {
+    line-height: $leading28;
+}
+
+.leading27 {
+    line-height: $leading27;
+}
+
+.leading24 {
+    line-height: $leading24;
+}
+
+.leading22 {
+    line-height: $leading22;
+}
+
+//letter-space
+.space0_12 {
+    letter-spacing: $space0_12;
+}
+
+.space0_28 {
+    letter-spacing: $space0_28;
+}
+
+.space0_61 {
+    letter-spacing: $space0_61;
+}
+
+.space0_96 {
+    letter-spacing: $space0_96;
+}
+
+//radius
+.radius30 {
+    border-radius: $radius30;
+}
+
+.radius10 {
+    border-radius: $radius10;
+}
+
+@include media-breakpoint-down(lg) {
+    .res-leading61 {
+        line-height: $leading61;
+    }
+
+    .res-leading16 {
+        line-height: $leading16;
+    }
+
+    .res-leading53 {
+        line-height: $leading53;
+    }
+
+    .res-leading46 {
+        line-height: $leading46;
+    }
+
+    .res-leading44 {
+        line-height: $leading44;
+    }
+
+    .res-leading35 {
+        line-height: $leading35;
+    }
+
+    .res-leading34 {
+        line-height: $leading34;
+    }
+
+    .res-leading32 {
+        line-height: $leading32;
+    }
+
+    .res-leading30 {
+        line-height: $leading30;
+    }
+
+    .res-leading29 {
+        line-height: $leading29;
+    }
+
+    .res-leading28 {
+        line-height: $leading28;
+    }
+
+    .res-leading27 {
+        line-height: $leading27;
+    }
+
+    .res-leading24 {
+        line-height: $leading24;
+    }
+
+    .res-leading22 {
+        line-height: $leading22;
+    }
+
+    .res-font61 {
+        font-size: $font61;
+    }
+
+    .res-font48 {
+        font-size: $font48;
+    }
+
+    .res-font35 {
+        font-size: $font35;
+    }
+
+    .res-font32 {
+        font-size: $font32;
+    }
+
+    .res-font29 {
+        font-size: $font29;
+    }
+
+    .res-font26 {
+        font-size: $font26;
+    }
+
+    .res-font25 {
+        font-size: $font25;
+    }
+
+    .res-font24 {
+        font-size: $font24;
+    }
+
+    .res-font22 {
+        font-size: $font22;
+    }
+
+    .res-font21 {
+        font-size: $font21;
+    }
+
+    .res-font16 {
+        font-size: $font16;
+    }
+
+    .res-font15 {
+        font-size: $font15;
+    }
+
+    .res-font14 {
+        font-size: $font14;
+    }
+
+    .res-font12 {
+        font-size: $font12;
+    }
+
+    .res-space0_12 {
+        letter-spacing: $space0_12;
+    }
+
+    .res-space0_28 {
+        letter-spacing: $space0_28;
+    }
+
+    .res-space0_61 {
+        letter-spacing: $space0_61;
+    }
+
+    .res-space0_96 {
+        letter-spacing: $space0_96;
+    }
+}
+
+.opacity80 {
+    opacity: $opacity80;
+}

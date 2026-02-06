@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "dmsans-medium";
+    src: url("/wp-content/themes/design-buro/assets/fonts/dmsans-medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "dmsans-semibold";
+    src: url("/wp-content/themes/design-buro/assets/fonts/dmsans-semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "dmsans-regular";
+    src: url("/wp-content/themes/design-buro/assets/fonts/dmsans-regular.ttf") format("truetype");
+}
+
+.sans-medium {
+    font-family: "dmsans-medium";
+}
+
+.sans-semibold {
+    font-family: "dmsans-semibold";
+}
+
+.sans-normal {
+    font-family: "dmsans-regular";
+}
