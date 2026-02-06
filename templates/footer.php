@@ -27,7 +27,7 @@ $policy_content = get_field('policy_content', 'option');
                 ?>
                     <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
                         <?php if (!empty($url)): ?>
-                            <a href="<?php $url; ?>" target="_blank">
+                            <a href="<?php echo $url; ?>" target="_blank">
                                 <div class="media-img d-flex justify-content-center align-items-center">
                                     <?php if (!empty($image)): ?>
                                         <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
@@ -94,7 +94,7 @@ $policy_content = get_field('policy_content', 'option');
                     ?>
                             <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
                                 <?php if (!empty($url)): ?>
-                                    <a href="<?php $url; ?>" target="_blank">
+                                    <a href="<?php echo $url; ?>" target="_blank">
                                         <div class="media-img d-flex justify-content-center align-items-center">
                                             <?php if (!empty($image)): ?>
                                                 <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">

@@ -1,41 +1,94 @@
 header {
     z-index: 99999;
-    padding-top: 35px;
-    padding-bottom: 25px;
 
     .header-wrapper {
         .header-logo {
-            width: 185px;
+            height: 93px;
+
+            @include media-breakpoint-down(lg) {
+                height: 51px;
+            }
         }
 
         .logo-scroll {
-            height: 75px;
+            height: 55px;
+        }
+    }
+
+    .menu-icons {
+        width: 63px;
+        height: 60px;
+        background-color: $color-f07a47;
+        border-radius: 0px 15px 15px 15px;
+
+        &.active {
+            background-color: $color-06556c;
+        }
+
+        .close-icon,
+        .menu-icon {
+            height: 18px;
+        }
+    }
+
+    .social-media-content {
+        .media-bg {
+            border: 1px solid #06556c4d;
         }
     }
 
     nav {
         ul {
             li {
-                margin-right: 5px;
-
                 &:last-child {
                     margin-right: 0px;
                 }
 
                 .header-link {
-                    padding-inline: 21px;
-                    border-radius: 0px 30px 30px 30px;
+                    padding-left: 21px;
+                    padding-right: 21px;
+                    border-radius: 0px $radius30 $radius30 $radius30;
                     color: $white;
+
+                    @include media-breakpoint-down(lg) {
+                        padding-left: 0px;
+                        padding-right: 0px;
+                        opacity: 50%;
+                    }
 
                     &.is-active {
                         color: $white !important;
                         background-color: $color-f07a47 !important;
+
+                        @include media-breakpoint-down(lg) {
+                            background-color: transparent !important;
+                            opacity: 100%;
+                            padding-left: 35px;
+                        }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 20px;
+                            height: 25px;
+                            background-image: url("/wp-content/themes/design-buro-wp/templates/icons/color-arrow.svg");
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            opacity: 0;
+
+                            @include media-breakpoint-down(lg) {
+                                opacity: 100%;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
+    &.header-active,
     &.dark-header {
         .white-logo {
             display: none !important;
@@ -49,7 +102,7 @@ header {
             ul {
                 li {
                     .header-link {
-                        color: $color-06556c;
+                        color: $color-06556c !important;
                     }
                 }
             }
@@ -58,13 +111,12 @@ header {
 
     &.header-fixed {
         background-color: $white;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
 
         nav {
             ul {
                 li {
-
                     .header-link {
                         color: $color-06556c;
                     }
@@ -82,6 +134,12 @@ header {
     }
 
     &.header-fixed-os {
-        transform: translateY(-160px);
+        transform: translateY(0px);
+    }
+
+    &.header-active {
+        height: 100%;
+        background-color: $color-edf4f3;
+        overflow: auto;
     }
 }
