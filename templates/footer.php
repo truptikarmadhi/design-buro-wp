@@ -11,9 +11,9 @@ $policy_content = get_field('policy_content', 'option');
 
 <footer class="footer bg-06556c dpt-80 dpb-60">
     <div class="container">
-       <div class="d-lg-none d-flex justify-content-center dmb-30">
+        <div class="d-lg-none d-flex justify-content-center dmb-30">
             <?php if(!empty($logo)):?>
-                    <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
+                <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
             <?php endif;?>
         </div>
         <div class="social-media-content col-lg-2 d-flex d-lg-none justify-content-center tmb-80">
@@ -27,7 +27,7 @@ $policy_content = get_field('policy_content', 'option');
                 ?>
                     <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
                         <?php if (!empty($url)): ?>
-                            <a href="<?php $content['url']; ?>" target="<?php echo $url["target"] == "_blank" ? "_blank" : ''; ?>">
+                            <a href="<?php $url; ?>" target="_blank">
                                 <div class="media-img d-flex justify-content-center align-items-center">
                                     <?php if (!empty($image)): ?>
                                         <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
@@ -44,14 +44,14 @@ $policy_content = get_field('policy_content', 'option');
             <div class="col-lg-6 col-12 text-center text-lg-start pe-lg-3">
                 <div class="dmb-25">
                     <?php if (!empty($address['url']) && !empty($address['title'])): ?>
-                        <a href="<?php echo $address['url']; ?>" target="<?php echo $address["target"] == "_blank" ? "_blank" : ''; ?>" class="text-decoration-none sans-medium font26 leading32 text-white res-font22 res-leading30">
+                        <a href="<?php echo $address['url']; ?>" target="_blank" class="text-decoration-none sans-medium font26 leading32 text-white res-font22 res-leading30">
                             <?php echo $address['title']; ?>
                         </a>
                     <?php endif; ?>
                 </div>
                 <div class="dmb-35">
                     <?php if (!empty($contact_number)): ?>
-                        <a href="tel:<?php echo $contact_number; ?>" class="text-decoration-none sans-medium font26 leading32 res-font22 res-leading28 text-white">
+                        <a href="tel:<?php echo $contact_number; ?>" target="_blank" class="text-decoration-none sans-medium font26 leading32 res-font22 res-leading28 text-white">
                             <?php echo $contact_number; ?>
                         </a>
                     <?php endif; ?>
@@ -95,13 +95,13 @@ $policy_content = get_field('policy_content', 'option');
                             <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
                                 <?php if (!empty($url)): ?>
                                     <a href="<?php $url; ?>" target="_blank">
-                                    <?php endif; ?>
-                                    <div class="media-img d-flex justify-content-center align-items-center">
-                                        <?php if (!empty($image)): ?>
-                                            <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
-                                        <?php endif; ?>
-                                    </div>
-                                </a>
+                                        <div class="media-img d-flex justify-content-center align-items-center">
+                                            <?php if (!empty($image)): ?>
+                                                <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                                            <?php endif; ?>
+                                        </div>
+                                    </a>
+                                <?php endif; ?>
                             </div>
                     <?php endforeach;
                     endif; ?>
@@ -110,15 +110,15 @@ $policy_content = get_field('policy_content', 'option');
         </div>
         <div class="d-lg-flex d-none justify-content-end dmb-30">
             <?php if(!empty($logo)):?>
-                    <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
+                <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
             <?php endif;?>
         </div>
         <div class="d-lg-flex aling-items-center justify-content-between">
-            <div class="col-lg-2 sans-normal font14 leading22 text-white text-capitalize text-center d-lg-flex d-none">
-                <?php if (!empty($footer_left_content)): ?>
+            <?php if (!empty($footer_left_content)): ?>
+                <div class="col-lg-2 sans-normal font14 leading22 text-white text-capitalize text-center d-lg-flex d-none">
                     <?php echo $footer_left_content; ?>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
              <ul class="mb-0 ps-0 footer-links list-none d-lg-flex align-items-center tmb-45">
                 <?php if (!empty($policy_content)):
                     foreach ($policy_content as $policy):
@@ -132,11 +132,11 @@ $policy_content = get_field('policy_content', 'option');
                 <?php endforeach;
                  endif; ?>
             </ul>
-             <div class="col-lg-2 sans-normal font14 leading22 res-font16  text-white text-capitalize d-flex justify-content-center  d-lg-none">
-                <?php if (!empty($footer_left_content)): ?>
+            <?php if (!empty($footer_left_content)): ?>
+                <div class="col-lg-2 sans-normal font14 leading22 res-font16  text-white text-capitalize d-flex justify-content-center d-lg-none">
                     <?php echo $footer_left_content; ?>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 </footer>

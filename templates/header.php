@@ -12,6 +12,7 @@ if ($header_select === 'white-header'){
     $header_color = 'dark-header';
 }
 ?>
+zxdvdxsbgvdf
 <header class="header <?php echo $header_color; ?> position-fixed top-0 w-100 transition">
     <div class="container">
         <div class="row justify-content-between align-items-center">
