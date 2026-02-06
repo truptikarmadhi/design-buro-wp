@@ -10,6 +10,7 @@ $policy_content = get_field('policy_content', 'option');
 ?>
 
 <footer class="footer bg-06556c dpt-80 dpb-60">
+    <!-- footer -->
     <div class="container">
         <div class="d-lg-none d-flex justify-content-center dmb-30">
             <?php if(!empty($logo)):?>
