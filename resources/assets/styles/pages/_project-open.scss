@@ -1,6 +1,12 @@
 .project-sub-hero-section {
     height: 565px;
 
+    
+    @include media-breakpoint-down(lg) {
+      height: 282px;
+      width: 295px;
+    }
+
     img {
         border-radius: 0px 0px 0px 500px;
     }
@@ -73,5 +79,10 @@
 
     .related-project-img {
         height: 465px;
+
+        
+    @include media-breakpoint-down(lg) {
+      height: 286px;
     }
-}
+    }
+} 

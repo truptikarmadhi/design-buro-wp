@@ -1,53 +1,60 @@
 .sub-hero-section {
-    height: 620px;
+  height: 620px;
 
-    .sub-bg-layer {
-        background: linear-gradient(180deg, rgba(3, 39, 49, 0.47), rgba(6, 85, 108, 0.4));
-    }
+  .sub-bg-layer {
+    background: linear-gradient(
+      180deg,
+      rgba(3, 39, 49, 0.47),
+      rgba(6, 85, 108, 0.4)
+    );
+  }
 }
 
 .left-accordion-section {
-    .services-accordion {
-        .closet-content {
-            display: none;
-        }
-
-        .icon-bg {
-            width: 41px;
-            height: 41px;
-            border: 1px solid rgba($color: $color-ffffff, $alpha: 0.2);
-            position: relative;
-
-            img {
-                height: 20px;
-            }
-        }
-
-        .closet-item {
-            border: 1px solid transparent;
-
-            .closet-header {
-                &.active {
-                    .icon-bg img {
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-
-            &.closet-active {
-                border: 1px solid $color-707070;
-            }
-        }
-
+  .services-accordion {
+    .closet-content {
+      display: none;
     }
 
-    .service-img {
-        height: 417px;
+    .icon-bg {
+      width: 41px;
+      height: 41px;
+      border: 1px solid rgba($color: $color-ffffff, $alpha: 0.2);
+      position: relative;
+
+      img {
+        height: 20px;
+      }
     }
+
+    .closet-item {
+      border: 1px solid transparent;
+
+      .closet-header {
+        &.active {
+          .icon-bg img {
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      &.closet-active {
+        border: 1px solid $color-707070;
+      }
+    }
+  }
+
+  .service-img {
+    height: 417px;
+
+    @include media-breakpoint-down(lg) {
+      height: 290px;
+    }
+  }
 }
 
 .team-slider-section {
-    &.half-curve {
-        border-radius: 0 100px 0 0;
-    }
+  &.half-curve {
+    border-radius: 0 100px 0 0;
+  }
 }

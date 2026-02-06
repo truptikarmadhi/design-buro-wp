@@ -51,14 +51,14 @@
                             <?php endif; ?>
                                <div class="position-absolute start-0 bottom-0 dpb-80 w-100">
                                     <div class="container">
-                                        <div class="col-6">
+                                        <div class="col-lg-6 col-12">
                                             <?php if (!empty($title)): ?>
-                                                <div class="sans-medium font61 space0_61 leading61 text-white dmb-10">
+                                                <div class="sans-medium font61 space0_61 leading61 res-font35 res-leading40 text-white dmb-10">
                                                     <?php echo $title; ?>
                                                 </div>
                                             <?php endif; ?>
                                             <?php if (!empty($description)): ?>
-                                                <div class="col-7 sans-medium font15 leading24 text-white dmb-30">
+                                                <div class="col-lg-7 px-lg-0 px-2  sans-medium font15 leading24 text-white dmb-30 tmb-20">
                                                     <?php echo $description; ?>
                                                 </div>
                                             <?php endif; ?>
@@ -100,10 +100,13 @@
                                                         alt="Project Image">
                                                 <div class="position-absolute bottom-0 start-0 ms-4 dmb-45">
                                                     <?php if(!empty($title)):?>
-                                                        <div class="card-title sans-semibold font32 leading22 text-white text-capitalize">
+                                                        <div class="card-title sans-semibold font32 leading22 text-white text-capitalize tmb-15">
                                                             <?php echo $title; ?>
                                                         </div>
                                                     <?php endif; ?>
+                                                    <div class="btnA bg-f07a47-white-text-btn  sans-medium font15 leading61 d-inline-flex d-lg-none justify-content-center align-items-center transition">
+                                                            View more
+                                                    </div>
                                                 </div>
                                                 <div class="position-absolute hover-wrapper bg-f07a47 start-0 h-100 w-100 transition">
                                                     <div class="position-absolute bottom-0 px-5 dpb-50">
@@ -142,14 +145,14 @@
             <section class="project-card-section bg-edf4f3">
                 <div class="container container2">
                     <div class="row justify-content-between dmb-50">
-                        <div class="col-lg-7">
-                            <div class="sans-medium font61 space0_61 leading61 text-06556c">
+                        <div class="col-lg-7 col-12">
+                            <div class="sans-medium font61 space0_61 leading61 res-font36 text-06556c">
                                 <?php if (!empty($title)): ?>
                                     <?php echo $title; ?>
                                 <?php endif; ?>
                             </div>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 ">
                             <div class="sans-medium font15 leading24 text-000b18">
                                 <?php if (!empty($description)): ?>
                                     <?php echo $description; ?>
@@ -172,14 +175,18 @@
                                     <div class="image-card dmb-20">
                                         <div class="position-relative radius10 overflow-hidden h-100">
                                             <a href="<?php echo get_permalink(); ?>">
-                                                <div class="project-bg-layer position-absolute bottom-0 start-0 w-100"></div>
+                                                <div class="project-bg-layer position-absolute bottom-0 start-0 w-100 h-100"></div>
                                                 <img class="w-100 h-100 object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>"
                                                     alt="Project Image">
                                                 <div class="card-title position-absolute bottom-0 start-0 ms-4 dmb-45">
-                                                    <div class="sans-semibold font32 leading22 text-white text-capitalize">
+                                                    <div class="sans-semibold font32 leading22 text-white text-capitalize tmb-15">
                                                         <?php echo get_the_title(); ?>
                                                     </div>
+                                                     <div class="btnA bg-f07a47-white-text-btn  sans-medium font15 leading61 d-inline-flex d-md-none justify-content-center align-items-center transition">
+                                                            View more
+                                                    </div>
                                                 </div>
+                                                
 
                                                 <div class="position-absolute hover-wrapper bg-f07a47 start-0 h-100 w-100 transition">
                                                     <div class="position-absolute bottom-0 px-5 dpb-50">
@@ -212,13 +219,16 @@
                                 <div class="image-card dmb-20">
                                     <div class="position-relative radius10 overflow-hidden h-100">
                                         <a href="<?php echo $link; ?>">
-                                            <div class="project-bg-layer position-absolute bottom-0 start-0 w-100"></div>
+                                            <div class="project-bg-layer position-absolute bottom-0 start-0 w-100 h-100"></div>
                                             <img class="w-100 h-100 object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>"
                                                 alt="Project Image">
                                             <div class="card-title position-absolute bottom-0 start-0 ms-4 dmb-45">
                                                 <div class="sans-semibold font32 leading22 text-white text-capitalize">
                                                     <?php echo $title; ?>
                                                 </div>
+                                                 <div class="btnA bg-f07a47-white-text-btn  sans-medium font15 leading61 d-inline-flex d-md-none justify-content-center align-items-center transition">
+                                                            View more
+                                                    </div>
                                             </div>
 
                                             <div class="position-absolute hover-wrapper bg-f07a47 start-0 h-100 w-100 transition">
@@ -287,16 +297,16 @@
             <section class="about-content-section">
                 <div class="container container2">
                     <div class="row justify-content-between">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-12">
                             <?php if (!empty($title)): ?>
-                                <div class="sans-medium font35 leading46 text-06556c pe-5">
+                                <div class="sans-medium font35 leading46 res-font26 res-leading36  text-06556c pe-lg-5 tmb-30">
                                     <?php echo $title; ?>
                                 </div>
                             <?php endif; ?>
                         </div>
                         <div class="col-lg-5">
                             <?php if (!empty($content)): ?>
-                                <div class="sans-medium font15 leading24 text-000b18 dmb-20">
+                                <div class="sans-medium font15 leading24 text-000b18 dmb-20 tmb-60">
                                     <?php echo $content; ?>
                                 </div>
                             <?php endif; ?>
@@ -319,15 +329,15 @@
                 <div class="container container2">
                     <div class="d-flex align-items-center dmb-30">
                         <?php if (!empty($title)): ?>
-                            <div class="col-lg-6">
-                                <div class="sans-medium font48 leading44 space0_96 text-06556c col-6"><?php echo $title; ?></div>
+                            <div class="col-lg-6 ">
+                                <div class="sans-medium font48 leading44 space0_96 res-font36 res-space-0_72 text-06556c col-lg-6"><?php echo $title; ?></div>
                             </div>
                         <?php endif; ?>
                         <?php if ($team_content == 'slider'): ?>
-                            <div class="col-lg-6 d-flex align-items-end justify-content-end">
+                            <div class="col-6 d-flex align-items-end justify-content-end">
                                 <?php if ($team_count > 4): ?>
-                                    <div class="slick-arrow-wrapper d-flex pe-4">
-                                        <button class="slick-arrows prev-arrow d-flex justify-content-center align-items-center rounded-circle transition bg-transparent me-1">
+                                    <div class="slick-arrow-wrapper d-flex pe-lg-4">
+                                        <button class="slick-arrows prev-arrow d-flex justify-content-center align-items-center rounded-circle transition bg-transparent me-lg-1">
                                             <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/light-arrow.svg" alt="Slick Arrow">
                                         </button>
                                         <button class="slick-arrows next-arrow d-flex justify-content-center align-items-center rounded-circle transition bg-transparent">
@@ -336,13 +346,17 @@
                                     </div>
                                 <?php endif; ?>
                                 <?php if (!empty($link['url']) && !empty($link['title'])): ?>
-                                    <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center text-decoration-none transition"
+                                    <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center   d-lg-flex d-none text-decoration-none transition"
                                     href="<?php echo $link['url']; ?>" target="<?php echo $link["target"] == "_blank" ? "_blank" : ''; ?>"><?php echo $link['title']; ?></a>
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
                     </div>
                     <?php if ($team_content == 'slider'): ?>
+
+
+
+
                         <div class="team-slider">
                             <?php foreach ($team_card as $team):
                                 $image = $team['image'];
@@ -350,23 +364,31 @@
                                 $job_title = $team['job_title'];
                             ?>
                                 <?php if (!empty($image)): ?>
-                                    <div class="team-card bg-3db4c0 position-relative radius10 overflow-hidden">
+                                    <div class="team-card bg-3db4c0 position-relative radius10 overflow-hidden dmb-15">
                                         <div class="bg-layer bg-06556c position-absolute bottom-0 w-100"></div>
                                         <div class="team-card-img position-absolute bottom-0 w-100">
                                             <img src="<?php echo $image['sizes']['medium']; ?>" class="h-100 w-100 object-cover" alt="<?php echo $image['title']; ?>">
                                         </div>
                                         <div class="team-card-title dmt-30 ms-4 position-absolute bg-4bbbc4">
                                             <?php if (!empty($name)): ?>
-                                                <div class="sans-medium font29 leading29 text-white text-capitalize"><?php echo $name; ?></div>
+                                                <div class="sans-medium font29 leading29 res-font22  text-white text-capitalize"><?php echo $name; ?></div>
                                             <?php endif; ?>
                                             <?php if (!empty($job_title)): ?>
-                                                <div class="sans-medium font21 leading35 text-white text-capitalize"><?php echo $job_title; ?></div>
+                                                <div class="sans-medium font21 leading35 res-font15 text-white text-capitalize"><?php echo $job_title; ?></div>
                                             <?php endif; ?>
                                         </div>
                                     </div>
+                                    
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
+                        <div class="d-flex justify-content-center">
+                             <?php if (!empty($link['url']) && !empty($link['title'])): ?>
+                                    <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center  d-lg-none d-flex text-decoration-none transition"
+                                    href="<?php echo $link['url']; ?>" target="<?php echo $link["target"] == "_blank" ? "_blank" : ''; ?>"><?php echo $link['title']; ?></a>
+                                <?php endif; ?>
+                        </div>
+                       
 
                     <?php elseif ($team_content == 'card'): ?>
                         <div class="row row8">
@@ -410,7 +432,7 @@
         ?>
             <section class="left-accordion-section">
                 <div class="container container2">
-                    <div class="row justify-content-between">
+                    <div class="row flex-lg-row flex-column flex-column-reverse  justify-content-between ">
                         <div class="col-lg-6 services-accordion">
                             <?php if (!empty($accordion_content)):
                                 foreach ($accordion_content as $accordion):
@@ -443,15 +465,15 @@
                             $image = $about_content['image'];
                         ?>
                             <div class="col-lg-6 ps-2">
-                                <div class="col-11 ps-4 ms-auto">
-                                    <h2 class="sans-medium font48 leading44 space0_96 text-06556c dmb-15"><?php echo $title; ?></h2>
+                                <div class="col-12 ps-lg-4 ms-lg-auto">
+                                    <h2 class="sans-medium font48 leading44 res-font36 space0_96 res-space-0_72 text-06556c dmb-15"><?php echo $title; ?></h2>
                                     <?php if (!empty($about_content)): ?>
-                                        <div class="sans-medium font25 leading34 text-06556c dmb-70">
+                                        <div class="sans-medium font25 leading34 res-font20 text-06556c dmb-70 tmb-20">
                                             <?php echo $content; ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if (!empty($image)): ?>
-                                        <div class="service-img radius10 overflow-hidden">
+                                        <div class="service-img radius10 overflow-hidden tmb-45">
                                             <img src="<?php echo $image['sizes']['medium']; ?>" class="w-100 h-100 object-cover" alt="<?php echo $image['title']; ?>">
                                         </div>
                                     <?php endif; ?>
@@ -472,10 +494,10 @@
             <section class="contact-us-section h-vh d-flex align-items-center bg-06556c">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-lg-4 d-flex flex-column justify-content-between">
+                        <div class="col-lg-4 d-flex flex-column justify-content-betwee
                             <div class="col-10">
                                 <?php if (!empty($title)): ?>
-                                    <div class="sans-medium font61 leading61 space0_61 text-white dmb-20"><?php echo $title; ?></div>
+                                    <div class="sans-medium font61 leading61 res-font45 res-leading45 space0_61 text-white dmb-20"><?php echo $title; ?></div>
                                 <?php endif; ?>
                                 <div class="dmb-35">
                                     <?php if (!empty($address['url']) && !empty($address['title'])): ?>
@@ -535,9 +557,9 @@
 
             <section class="privacy-policy-section bg-edf4f3">
                 <div class="container">
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-lg-4 dmb-15">
-                            <ul class="position-sticky list-none mb-0 ps-0 privacy-links" id="privacy-links">
+                            <ul class="position-sticky list-none mb-0 ps-0 privacy-links d-flex " id="privacy-links">
                                 <?php if (have_rows('privacy_group')): ?>
                                     <?php $i = 0;
                                     while (have_rows('privacy_group')):
@@ -545,7 +567,7 @@
                                         $i++;
                                     ?>
                                         <?php $title = get_sub_field('title'); ?>
-                                        <li class="position-relative dmb-10">
+                                        <li class="position-relative ms-3 dmb-10">
                                             <a class="sans-normal font16 leading28 text-06556c opacity80 text-decoration-none transition" href="#privacy<?php echo $i; ?>">
                                                 <?php echo $title; ?>
                                             </a>
@@ -554,7 +576,7 @@
                                 <?php endif; ?>
                             </ul>
                         </div>
-                        <div class="col-lg-7 pe-4">
+                        <div class="col-lg-7 pe-lg-4">
                             <?php if (have_rows('privacy_group')): ?>
                                 <?php $i = 0;
                                 while (have_rows('privacy_group')):
