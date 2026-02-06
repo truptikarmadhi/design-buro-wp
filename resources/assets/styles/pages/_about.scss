@@ -7,7 +7,6 @@
 }
 
 .left-accordion-section {
-
     .services-accordion {
         .closet-content {
             display: none;
@@ -40,14 +39,14 @@
             }
         }
 
-        .service-img {
-            height: 427px;
-        }
+    }
+
+    .service-img {
+        height: 417px;
     }
 }
 
 .team-slider-section {
-
     &.half-curve {
         border-radius: 0 100px 0 0;
     }

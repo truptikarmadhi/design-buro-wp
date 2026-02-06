@@ -5,14 +5,14 @@ $header_logo = get_field('header_logo', 'option');
 $dark_logo = get_field('dark_logo', 'option');
 $header_links = get_field('header_links', 'option');
 $header_select = get_field('header_select');
+$header_color = '';
+if ($header_select === 'white-header'){
+    $header_color = '';
+}elseif ($header_select === 'dark-header'){
+    $header_color = 'dark-header';
+}
 ?>
-<?php if ($header_select === 'white-header'):
-    $header_select = '';
-elseif ($header_select === 'dark-header'):
-    $header_select = 'dark-header';
-endif;
-?>
-<header class="header <?php echo $header_select; ?> position-fixed top-0 w-100 transition">
+<header class="header <?php echo $header_color; ?> position-fixed top-0 w-100 transition">
     <div class="container">
         <div class="row justify-content-between align-items-center">
             <div class="header-wrapper col-2 d-flex">

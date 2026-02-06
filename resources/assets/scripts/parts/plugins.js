@@ -14,13 +14,16 @@ export class Plugins {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: false,
+      autoplay: true,
+      speed:2000,
+      draggable:true,
       arrows: false,
+      fade:true,
       responsive: [
         {
           breakpoint: 991,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
           },
         },
         {

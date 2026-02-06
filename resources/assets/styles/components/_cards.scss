@@ -20,14 +20,21 @@
 .image-card {
     height: 535px;
 
-    .project-bg-layer {
-        height: 275px;
-        background: linear-gradient(180deg, rgba(6, 85, 108, 0), rgba(6, 85, 108, 0.3));
+    &:nth-child(4n + 1),
+    &:nth-child(4n + 4) {
+        width: 58%;
     }
 
     &:nth-child(4n + 2),
     &:nth-child(4n + 3) {
-        width: 525px;
+        width: 42%;
+    }
+
+
+    .project-bg-layer {
+        height: 275px;
+        background: linear-gradient(180deg, rgba(6, 85, 108, 0), rgba(6, 85, 108, 1));
+        opacity: 34%;
     }
 
     .hover-wrapper {
