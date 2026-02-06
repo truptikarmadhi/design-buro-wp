@@ -262,6 +262,18 @@
 
     .res-leading22 {
         line-height: $leading22;
+    }   
+    .res-leading23 {
+        line-height: $res-leading23;
+    }   
+    .res-leading36 {
+        line-height: $res-leading36;
+    }   
+    .res-leading40 {
+        line-height: $res-leading40;
+    }
+    .res-leading45 {
+        line-height: $res-leading45;
     }
 
     .res-font61 {
@@ -320,6 +332,20 @@
         font-size: $font12;
     }
 
+    .res-font20{
+        font-size: $res-font20;
+    }
+    .res-font30{
+        font-size: $res-font30;
+    }
+    .res-font36{
+        font-size: $res-font36;
+    }
+    .res-font45{
+        font-size: $res-font45;
+    }
+
+
     .res-space0_12 {
         letter-spacing: $space0_12;
     }
@@ -335,8 +361,41 @@
     .res-space0_96 {
         letter-spacing: $space0_96;
     }
+
+
+    .res-space-0_35 {
+        letter-spacing:  $res-space-0_35;
+    }
+    .res-space-0_44 {
+        letter-spacing:  $res-space-0_44;
+    }
+    .res-space-0_45 {
+        letter-spacing:  $res-space-0_45;
+    }
+    .res-space-0_15 {
+        letter-spacing:  $res-space-0_15;
+    }
+    .res-space-0_72 {
+        letter-spacing:  $res-space-0_72;
+    }
+    .res-space-0_15 {
+        letter-spacing:  $res-space-0_15;
+    }
+    .res-space-0_6 {
+        letter-spacing: $res-space-0_6;
+    }
+
+
+    .res-opacity50 {
+        opacity: $res-opacity50;
+    }
+
 }
 
 .opacity80 {
     opacity: $opacity80;
 }
+
+
+
+
