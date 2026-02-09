@@ -53,7 +53,7 @@
                                     <div class="container">
                                         <div class="col-lg-6 col-12">
                                             <?php if (!empty($title)): ?>
-                                                <div class="sans-medium font61 space0_61 leading61 res-font35 res-leading40 text-white dmb-10">
+                                                <div class="sans-medium font61 space0_61 leading61 res-font35 res-leading40 res-space-0_35 text-white dmb-10">
                                                     <?php echo $title; ?>
                                                 </div>
                                             <?php endif; ?>
@@ -98,7 +98,7 @@
                                                 <div class="bg-layer bg-00000040 position-absolute bottom-0 start-0 w-100 h-100"></div>
                                                 <img class="w-100 h-100 object-cover" src="<?php echo $image['sizes']['medium']; ?>"
                                                         alt="Project Image">
-                                                <div class="position-absolute bottom-0 start-0 ms-4 dmb-45">
+                                                <div class="position-absolute bottom-0 start-0 ms-4 dmb-45 tmb-20">
                                                     <?php if(!empty($title)):?>
                                                         <div class="card-title sans-semibold font32 leading22 text-white text-capitalize tmb-15">
                                                             <?php echo $title; ?>
@@ -144,9 +144,9 @@
         ?>
             <section class="project-card-section bg-edf4f3">
                 <div class="container container2">
-                    <div class="row justify-content-between dmb-50">
+                    <div class="row justify-content-between dmb-50 tmb-35">
                         <div class="col-lg-7 col-12">
-                            <div class="sans-medium font61 space0_61 leading61 res-font36 text-06556c">
+                            <div class="sans-medium font61 space0_61 leading61 res-font36 text-06556c tmb-15">
                                 <?php if (!empty($title)): ?>
                                     <?php echo $title; ?>
                                 <?php endif; ?>
@@ -178,7 +178,7 @@
                                                 <div class="project-bg-layer position-absolute bottom-0 start-0 w-100 h-100"></div>
                                                 <img class="w-100 h-100 object-cover" src="<?php echo get_the_post_thumbnail_url(); ?>"
                                                     alt="Project Image">
-                                                <div class="card-title position-absolute bottom-0 start-0 ms-4 dmb-45">
+                                                <div class="card-title position-absolute bottom-0 start-0 ms-4 dmb-45 tmb-20">
                                                     <div class="sans-semibold font32 leading22 text-white text-capitalize tmb-15">
                                                         <?php echo get_the_title(); ?>
                                                     </div>
@@ -299,12 +299,12 @@
                     <div class="row justify-content-between">
                         <div class="col-lg-6 col-12">
                             <?php if (!empty($title)): ?>
-                                <div class="sans-medium font35 leading46 res-font26 res-leading36  text-06556c pe-lg-5 tmb-30">
+                                <div class="sans-medium font35 leading46 res-font26 res-leading36 text-06556c pe-lg-5    tmb-30">
                                     <?php echo $title; ?>
                                 </div>
                             <?php endif; ?>
                         </div>
-                        <div class="col-lg-5">
+                        <div class="col-lg-5 ">
                             <?php if (!empty($content)): ?>
                                 <div class="sans-medium font15 leading24 text-000b18 dmb-20 tmb-60">
                                     <?php echo $content; ?>
@@ -353,10 +353,6 @@
                         <?php endif; ?>
                     </div>
                     <?php if ($team_content == 'slider'): ?>
-
-
-
-
                         <div class="team-slider">
                             <?php foreach ($team_card as $team):
                                 $image = $team['image'];
@@ -371,7 +367,7 @@
                                         </div>
                                         <div class="team-card-title dmt-30 ms-4 position-absolute bg-4bbbc4">
                                             <?php if (!empty($name)): ?>
-                                                <div class="sans-medium font29 leading29 res-font22  text-white text-capitalize"><?php echo $name; ?></div>
+                                                <div class="sans-medium font29 leading29 res-font22   text-white text-capitalize"><?php echo $name; ?></div>
                                             <?php endif; ?>
                                             <?php if (!empty($job_title)): ?>
                                                 <div class="sans-medium font21 leading35 res-font15 text-white text-capitalize"><?php echo $job_title; ?></div>
@@ -398,18 +394,18 @@
                                 $job_title = $team['job_title'];
                             ?>
                                 <?php if (!empty($image)): ?>
-                                    <div class="col-lg-3 col-md-4 col-sm-6 dmb-15">
-                                        <div class="team-card bg-3db4c0 position-relative radius10 overflow-hidden">
+                                    <div class="col-lg-3 col-md-4 col-6 team-cards dmb-15">
+                                        <div class="team-card bg-3db4c0 position-relative  radius10 overflow-hidden">
                                             <div class="bg-layer bg-06556c position-absolute bottom-0 w-100"></div>
                                             <div class="team-card-img position-absolute bottom-0 w-100">
                                                 <img src="<?php echo $image['sizes']['medium']; ?>" class="h-100 w-100 object-cover" alt="<?php echo $image['title']; ?>">
                                             </div>
-                                            <div class="team-card-title dmt-30 ms-4 position-absolute bg-4bbbc4">
+                                            <div class="team-card-title dmt-30 tmt-15 ms-lg-4 ms-3 position-absolute bg-4bbbc4">
                                                 <?php if (!empty($name)): ?>
-                                                    <div class="sans-medium font29 leading29 text-white text-capitalize"><?php echo $name; ?></div>
+                                                    <div class="sans-medium font29 leading29 res-font22  text-white text-capitalize"><?php echo $name; ?></div>
                                                 <?php endif; ?>
                                                 <?php if (!empty($job_title)): ?>
-                                                    <div class="sans-medium font21 leading35 text-white text-capitalize"><?php echo $job_title; ?></div>
+                                                    <div class="sans-medium font21 leading35 res-font15  text-white text-capitalize"><?php echo $job_title; ?></div>
                                                 <?php endif; ?>
                                             </div>
                                         </div>
@@ -432,7 +428,7 @@
         ?>
             <section class="left-accordion-section">
                 <div class="container container2">
-                    <div class="row flex-lg-row flex-column flex-column-reverse  justify-content-between ">
+                    <div class="row flex-lg-row flex-column flex-column-reverse justify-content-between ">
                         <div class="col-lg-6 services-accordion">
                             <?php if (!empty($accordion_content)):
                                 foreach ($accordion_content as $accordion):
@@ -449,7 +445,7 @@
                                             </div>
                                             <div class="closet-content px-5 dpb-50">
                                                 <?php if (!empty($description)): ?>
-                                                    <div class="sans-normal font14 leading24 text-white col-10">
+                                                    <div class="sans-normal font14 leading24 text-white col-lg-10 col-12">
                                                         <?php echo $description; ?>
                                                     </div>
                                                 <?php endif; ?>
@@ -494,7 +490,7 @@
             <section class="contact-us-section h-vh d-flex align-items-center bg-06556c">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-lg-4 d-flex flex-column justify-content-betwee
+                        <div class="col-lg-4 d-flex flex-column justify-content-between">
                             <div class="col-10">
                                 <?php if (!empty($title)): ?>
                                     <div class="sans-medium font61 leading61 res-font45 res-leading45 space0_61 text-white dmb-20"><?php echo $title; ?></div>
@@ -540,7 +536,7 @@
 
                         </div>
                         <div class="col-lg-8">
-                            <div class="col-11 ps-3 ms-auto">
+                            <div class="col-lg-11 ps-lg-3 ms-auto">
                                 <div class="sans-normal font16 leading24 text-edf4f3 dmb-30">
                                     Send us a message
                                 </div>

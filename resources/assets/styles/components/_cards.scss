@@ -87,14 +87,29 @@
 
   .team-card-img {
     height: 335px;
-
-    @include media-breakpoint-down(lg) {
-      height: 223px;
-    }
   }
 
   .bg-layer {
     clip-path: ellipse(80% 100% at bottom);
     height: 250px;
+  }
+}
+
+.team-cards {
+  .team-card {
+    @include media-breakpoint-down(lg) {
+      height: 225px !important;
+    }
+
+    .team-card-img {
+      @include media-breakpoint-down(lg) {
+        height: 158px;
+      }
+    }
+    .bg-layer {
+      @include media-breakpoint-down(lg) {
+        height: 125px;
+      }
+    }
   }
 }
