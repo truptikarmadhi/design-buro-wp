@@ -1,71 +1,115 @@
 .card-hover {
-    .img {
-        transform: scale(1);
-        transition: 0.3s all ease-in-out;
-    }
+  .img {
+    transform: scale(1);
+    transition: 0.3s all ease-in-out;
+  }
 
-    &:hover {
-        .img {
-            transform: scale(1.1);
-        }
+  &:hover {
+    .img {
+      transform: scale(1.1);
     }
+  }
 }
 
 .project-card-section {
-    .image-card {
-        height: 466px;
+  .image-card {
+    height: 466px;
+
+    @include media-breakpoint-down(lg) {
+      height: 287px;
     }
+  }
 }
 
 .image-card {
-    height: 535px;
+  height: 535px;
 
-    &:nth-child(4n + 1),
-    &:nth-child(4n + 4) {
-        width: 58%;
+  @include media-breakpoint-down(lg) {
+    height: 287px;
+  }
+
+  &:nth-child(4n + 1),
+  &:nth-child(4n + 4) {
+    width: 58%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
     }
+  }
 
-    &:nth-child(4n + 2),
-    &:nth-child(4n + 3) {
-        width: 42%;
+  &:nth-child(4n + 2),
+  &:nth-child(4n + 3) {
+    width: 42%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
     }
+  }
 
-
-    .project-bg-layer {
-        height: 275px;
-        background: linear-gradient(180deg, rgba(6, 85, 108, 0), rgba(6, 85, 108, 1));
-        opacity: 34%;
+  .project-bg-layer {
+    @include media-breakpoint-up(md) {
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 85, 108, 0),
+        rgba(6, 85, 108, 1)
+      );
+      opacity: 34%;
     }
+  }
 
+  .hover-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0px);
+  }
+
+  &:hover {
     .hover-wrapper {
+      @include media-breakpoint-up(md) {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-100%);
+        opacity: 92%;
+      }
+    }
+
+    .card-title {
+      @include media-breakpoint-up(md) {
         opacity: 0;
-        visibility: hidden;
-        transform: translateY(0px);
+      }
     }
-
-    &:hover {
-        .hover-wrapper {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(-100%);
-            opacity: 92%;
-        }
-
-        .card-title {
-            opacity: 0;
-        }
-    }
+  }
 }
 
 .team-card {
-    height: 440px;
+  height: 440px;
+
+  .team-card-img {
+    height: 335px;
+  }
+
+  .bg-layer {
+    clip-path: ellipse(80% 100% at bottom);
+    height: 250px;
+  }
+}
+
+.team-cards {
+  .team-card {
+    @include media-breakpoint-down(lg) {
+      height: 225px !important;
+    }
 
     .team-card-img {
-        height: 335px;
+      @include media-breakpoint-down(lg) {
+        height: 158px;
+      }
     }
-
     .bg-layer {
-        clip-path: ellipse(80% 100% at bottom);
-        height: 250px;
+      @include media-breakpoint-down(lg) {
+        height: 125px;
+      }
     }
+  }
 }

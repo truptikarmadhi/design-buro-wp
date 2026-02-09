@@ -16,46 +16,41 @@ button,
 
     &.bg-06556C-btn {
         background-color: $color-06556c;
-        border: 1px solid transparent;
+        border: 1px solid $color-06556c;
         color: $white;
 
         &:hover {
             background-color: transparent;
-            border: 1px solid $color-06556c;
         }
     }
 
     &.bg-06556C-dark-text-btn {
         background-color: $color-06556c;
-        border: 1px solid transparent;
+        border: 1px solid $color-06556c;
         color: $white;
 
         &:hover {
             background-color: transparent;
-            border: 1px solid $color-06556c;
             color: $color-06556c;
         }
     }
 
     &.bg-f07a47-white-text-btn {
         background-color: $color-f07a47;
-        border: 1px solid transparent;
+        border: 1px solid $color-f07a47;
         color: $white;
 
         &:hover {
             background-color: transparent;
-            border: 1px solid $color-f07a47;
             color: $white;
         }
     }
 
     &.bg-white-btn {
         background-color: $white;
-        border: 1px solid transparent;
         color: $color-f07a47;
 
         &:hover {
-            background-color: $white;
             border: 1px solid transparent;
             color: $color-f07a47;
         }
@@ -70,12 +65,11 @@ button,
 
     &.bg-f07a47-white-text-btn {
         background-color: $color-f07a47;
-        border: 1px solid transparent;
+        border: 1px solid $color-f07a47;
         color: $white;
 
         &:hover {
             background-color: transparent;
-            border: 1px solid $color-f07a47;
             color: $white;
         }
     }

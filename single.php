@@ -23,10 +23,10 @@ $category = get_the_category();
                     ?>
                         <div class="dmb-30">
                             <?php if(!empty($title)):?>
-                                <div class="sans-normal font24 leading28 text-f07a47 dmb-5"><?php echo $title; ?></div>
+                                <div class="sans-normal font24 leading28 res-font20 res-leading24 text-f07a47 dmb-5"><?php echo $title; ?></div>
                             <?php endif; ?>
                             <?php if(!empty($content)):?>
-                                <div class="sans-normal font24 leading28 text-06556c text-capitalize">
+                                <div class="sans-normal font24 leading28 res-font20 res-leading24 text-06556c text-capitalize">
                                     <?php echo $content; ?>
                                 </div>
                             <?php endif; ?>
@@ -35,7 +35,7 @@ $category = get_the_category();
                 <?php endif; ?>
             </div>
 
-            <div class="col-lg-7 ps-5 pe-3">
+            <div class="col-lg-7 ps-lg-5 pe-lg-3">
                 <?php if(!empty($project_content)):?>
                     <div class="project-desc-content text-000b18">
                         <?php echo $project_content; ?>
