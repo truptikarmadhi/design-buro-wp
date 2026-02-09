@@ -83,74 +83,74 @@ $category = get_the_category();
     </section>
 <?php endif; ?>
 
-<section class="related-project-slider-section bg-edf4f3 overflow-hidden dpb-100">
-    <div class="container">
-        <div class="row dmb-45">
-            <div class="col-lg-6">
-                <?php if(!empty($recent_project_title)):?>
-                    <div class="sans-medium font48 leading53 space0_96 text-06556c col-6">
-                        <?php echo $recent_project_title; ?>
-                    </div>
-                <?php endif; ?>
+<section class="related-project-slider-section bg-edf4f3 overflow-hidden dmb-100">
+        <div class="container">
+            <div class="row dmb-45">
+                <div class="col-lg-6">
+                    <?php if(!empty($recent_project_title)):?>
+                        <div class="sans-medium font48 leading53 space0_96 text-06556c col-6">
+                            <?php echo $recent_project_title; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-lg-6 d-flex align-items-end justify-content-end">
+                    <?php
+                    $current_post_id = get_the_ID();
+                    $args = array(
+                        'post_type' => 'post',
+                        'order' => 'ASC',
+                        'orderby' => 'date',
+                        'posts_per_page' => -1,
+                        'post__not_in'   => array($current_post_id),
+                    );
+                    $the_query = new WP_Query($args);
+                    $post_count = $the_query->post_count;
+                ?>
+                    <?php if ($post_count > 2): ?>
+                        <div class="slick-arrow-wrapper d-flex pe-4">
+                            <button class="slick-arrows prev-arrow d-flex justify-content-center align-items-center rounded-circle bg-transparent transition me-1">
+                                <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/light-arrow.svg" alt="Slick Arrow">
+                            </button>
+                            <button class="slick-arrows next-arrow d-flex justify-content-center align-items-center rounded-circle bg-transparent transition">
+                                <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/light-arrow.svg" alt="Slick Arrow">
+                            </button>
+                        </div>
+                    <?php endif; ?>
+                    <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center text-decoration-none transition" href="/project/">View All</a>
+                </div>
             </div>
-            <div class="col-lg-6 d-flex align-items-end justify-content-end">
-                 <?php
-            $current_post_id = get_the_ID();
-            $args = array(
-                'post_type' => 'post',
-                'order' => 'ASC',
-                'orderby' => 'date',
-                'posts_per_page' => -1,
-                'post__not_in'   => array($current_post_id),
-            );
-            $the_query = new WP_Query($args);
-          $post_count = $the_query->post_count;
-            ?>
-                <?php if ($post_count > 2): ?>
-                    <div class="slick-arrow-wrapper d-flex pe-4">
-                        <button class="slick-arrows prev-arrow d-flex justify-content-center align-items-center rounded-circle bg-transparent transition me-1">
-                            <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/light-arrow.svg" alt="Slick Arrow">
-                        </button>
-                        <button class="slick-arrows next-arrow d-flex justify-content-center align-items-center rounded-circle bg-transparent transition">
-                            <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/light-arrow.svg" alt="Slick Arrow">
-                        </button>
-                    </div>
-                <?php endif; ?>
-                <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center text-decoration-none transition" href="/project/">View All</a>
-            </div>
-        </div>
-        <div class="related-project-slider">
-            <?php
-            $current_post_id = get_the_ID();
-            $args = array(
-                'post_type' => 'post',
-                'order' => 'ASC',
-                'orderby' => 'date',
-                'posts_per_page' => -1,
-                'post__not_in'   => array($current_post_id),
-            );
-            $the_query = new WP_Query($args);
+                <div class="related-project-slider">
+                        <?php
+                        $current_post_id = get_the_ID();
+                        $args = array(
+                            'post_type' => 'post',
+                            'order' => 'ASC',
+                            'orderby' => 'date',
+                            'posts_per_page' => -1,
+                            'post__not_in'   => array($current_post_id),
+                        );
+                        $the_query = new WP_Query($args);
 
-            if ($the_query->have_posts()) :
-                while ($the_query->have_posts()) : $the_query->the_post();
-            ?>
-                    <div class="position-relative related-project-card radius10 overflow-hidden">
-                        <a href="<?php echo get_permalink(); ?>">
-                            <div class="related-project-img radius10 overflow-hidden">
-                                <div class="card-layer position-absolute w-100 bottom-0"></div>
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-100 h-100 object-cover"
-                                    alt="Project Image">
-                            </div>
-                            <div class="related-project-title position-absolute bottom-0 start-0 ms-5 dmb-45 sans-semibold font29 leading22 text-white">
-                                <div class="">
-                                    <?php echo get_the_title(); ?>
+                        if ($the_query->have_posts()) :
+                            while ($the_query->have_posts()) : $the_query->the_post();
+                        ?>
+                                <div class="position-relative related-project-card radius10 overflow-hidden">
+                                    <a href="<?php echo get_permalink(); ?>">
+                                        <div class="related-project-img radius10 overflow-hidden">
+                                            <div class="card-layer position-absolute w-100 bottom-0"></div>
+                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-100 h-100 object-cover"
+                                                alt="Project Image">
+                                        </div>
+                                        <div class="related-project-title position-absolute bottom-0 start-0 ms-5 dmb-45 sans-semibold font29 leading22 text-white">
+                                            <div class="">
+                                                <?php echo get_the_title(); ?>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                            </div>
-                        </a>
+                        <?php endwhile;
+                        endif;
+                        wp_reset_query(); ?>
                     </div>
-            <?php endwhile;
-            endif;
-            wp_reset_query(); ?>
-        </div>
     </div>
 </section>
