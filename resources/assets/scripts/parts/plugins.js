@@ -8,34 +8,102 @@ export class Plugins {
     this.RelatedOpenProjectSlider();
     this.TeamSlider();
   }
+  // HeroSlider() {
+  //   $(".hero-slider").slick({
+  //     dots: true,
+  //     infinite: true,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     speed: 2000,
+  //     draggable: true,
+  //     arrows: false,
+  //     fade: true,
+  //     responsive: [
+  //       {
+  //         breakpoint: 991,
+  //         settings: {
+  //           slidesToShow: 1,
+  //         },
+  //       },
+  //       {
+  //         breakpoint: 525,
+  //         settings: {
+  //           slidesToShow: 1,
+  //           infinite: false,
+  //         },
+  //       },
+  //     ],
+  //   });
+  // }
+
   HeroSlider() {
-    $(".hero-slider").slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 2000,
-      draggable: true,
-      arrows: false,
-      fade: true,
-      responsive: [
-        {
-          breakpoint: 991,
-          settings: {
-            slidesToShow: 1,
-          },
+  var $slider = $(".hero-slider");
+
+  $slider.on("init", function (event, slick) {
+    handleVideo(slick.currentSlide, slick);
+  });
+
+  $slider.slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 500,
+    draggable: true,
+    arrows: false,
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 1,
         },
-        {
-          breakpoint: 525,
-          settings: {
-            slidesToShow: 1,
-            infinite: false,
-          },
+      },
+      {
+        breakpoint: 525,
+        settings: {
+          slidesToShow: 1,
+          infinite: false,
         },
-      ],
+      },
+    ],
+  });
+
+  // NEW CODE START
+  function handleVideo(currentSlide, slick) {
+    var $currentSlide = $(slick.$slides[currentSlide]);
+    var video = $currentSlide.find("video").get(0);
+
+    // reset all videos
+    $slider.find("video").each(function () {
+      this.pause();
+      this.currentTime = 0;
+      this.onended = null;
     });
+
+    if (video) {
+      // pause slick autoplay during video
+      $slider.slick("slickPause");
+
+      video.play();
+
+      // video complete hone par next slide
+      video.onended = function () {
+        $slider.slick("slickNext");
+        $slider.slick("slickPlay");
+      };
+    }
   }
+
+  // jab slide change ho
+  $slider.on("afterChange", function (event, slick, currentSlide) {
+    handleVideo(currentSlide, slick);
+  });
+  // NEW CODE END
+}
+
 
   OpenProjectSlider() {
     $(".project-slider").slick({
@@ -63,6 +131,9 @@ export class Plugins {
       ],
     });
   }
+
+
+
 
   RelatedOpenProjectSlider() {
     $(".related-project-slider").slick({

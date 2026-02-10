@@ -34,6 +34,7 @@ header {
     .social-media-content {
         .media-bg {
             border: 1px solid #06556c4d;
+
         }
     }
 
@@ -42,6 +43,17 @@ header {
             li {
                 &:last-child {
                     margin-right: 0px;
+                    a{
+                        padding-right: 0 !important;
+                    }
+                    .header-link{
+                        
+                        .is-active{
+                            padding-right: 0 !important;
+                            
+                        }
+                    }
+
                 }
 
                 .header-link {
@@ -55,6 +67,7 @@ header {
                         padding-right: 0px;
                         opacity: 50%;
                     }
+                    
 
                     &.is-active {
                         color: $white !important;

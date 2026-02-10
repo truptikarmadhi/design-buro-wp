@@ -1,12 +1,13 @@
 .sub-hero-section {
   height: 620px;
 
+  @include media-breakpoint-down(lg) {
+        height: 585px;
+      }
   .sub-bg-layer {
-    background: linear-gradient(
-      180deg,
-      rgba(3, 39, 49, 0.47),
-      rgba(6, 85, 108, 0.4)
-    );
+    background: linear-gradient(180deg,
+        rgba(3, 39, 49, 0.47),
+        rgba(6, 85, 108, 0.4));
   }
 }
 
@@ -22,13 +23,28 @@
       border: 1px solid rgba($color: $color-ffffff, $alpha: 0.2);
       position: relative;
 
+      @include media-breakpoint-down(lg) {
+        width: 31px;
+        height: 31px;
+      }
+
       img {
         height: 20px;
+
+        @include media-breakpoint-down(lg) {
+          height: 15px;
+        }
       }
     }
 
     .closet-item {
       border: 1px solid transparent;
+
+      &:last-child {
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 0px !important;
+        }
+      }
 
       .closet-header {
         &.active {
@@ -56,5 +72,9 @@
 .team-slider-section {
   &.half-curve {
     border-radius: 0 100px 0 0;
+
+    @include media-breakpoint-down(lg){
+      border-radius: 0px 50px 0 0;
+    }
   }
 }

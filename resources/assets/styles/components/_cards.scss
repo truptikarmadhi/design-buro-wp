@@ -46,6 +46,12 @@
     }
   }
 
+  &:last-child{
+    @include media-breakpoint-down(lg){
+      margin-bottom: 0px !important;
+    }
+  }
+
   .project-bg-layer {
     @include media-breakpoint-up(md) {
       height: 100%;
@@ -92,6 +98,13 @@
   .bg-layer {
     clip-path: ellipse(80% 100% at bottom);
     height: 250px;
+
+      @include media-breakpoint-down(lg) {
+        height: 265px;
+      }
+
+
+
   }
 }
 

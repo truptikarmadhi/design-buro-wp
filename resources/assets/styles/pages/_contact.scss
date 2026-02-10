@@ -3,3 +3,8 @@ body.contact {
         display: none;
     }
 }
+.contact-us-section{
+    @include media-breakpoint-down(lg){
+        height: auto;
+    }
+}

@@ -13,7 +13,7 @@ if ($header_select === 'white-header'){
     $header_color = 'dark-header';
 }
 ?>
-<header class="header <?php echo $header_color; ?> position-fixed top-0 w-100 transition dpt-35 dpb-25 tpt-30 tpb-30">
+<header class="header <?php echo $header_color; ?> position-fixed top-0 w-100 transition dpt-35 dpb-25 tpt-35 tpb-35">
     <div class="container">
         <div class="row flex-column flex-lg-row justify-content-between align-items-center">
             <div class="col-lg-2 d-flex align-items-center justify-content-between">
@@ -51,7 +51,7 @@ if ($header_select === 'white-header'){
             <nav class="col-12 col-lg-8 navigation d-flex flex-column flex-lg-row justify-content-between justify-content-lg-end align-items-lg-center tpt-75">
                 <ul class="list-none d-flex flex-column flex-lg-row justify-content-lg-end ps-0 mb-0">
                     <?php
-                    $current_path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+                    $current_path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');    
 
                     if (!empty($header_links)) :
                         foreach ($header_links as $nav_links) :

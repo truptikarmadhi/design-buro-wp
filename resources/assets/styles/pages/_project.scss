@@ -1,12 +1,19 @@
-.projects-section {
-    .project-title {
-        bottom: 50px;
-        left: 40px;
-    }
-}
-
-.project-slider-section {
-    .project-img {
+    .project-slider {
         height: 370px;
+
+        @include media-breakpoint-down(lg) {
+            height: 252px;
+        }
     }
-}
+
+    .project-image-slider-section {
+        .slick-wrap {
+            padding-left: 38px !important;
+            padding-right: 38px !important;
+
+            @include media-breakpoint-down(lg){
+                 padding-left: 10px !important;
+            padding-right: 10px !important;
+            }
+        }
+    }

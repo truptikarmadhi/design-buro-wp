@@ -49,7 +49,7 @@ $policy_content = get_field('policy_content', 'option');
                         </a>
                     <?php endif; ?>
                 </div>
-                <div class="dmb-35">
+                <div class="dmb-35 tmb-25">
                     <?php if (!empty($contact_number)): ?>
                         <a href="tel:<?php echo $contact_number; ?>" target="_blank" class="text-decoration-none sans-medium font26 leading32 res-font22 res-leading28 text-white">
                             <?php echo $contact_number; ?>
@@ -62,19 +62,19 @@ $policy_content = get_field('policy_content', 'option');
                             href="<?php echo $get_in_touch_link['url']; ?>" target="<?php echo $get_in_touch_link["target"] == "_blank" ? "_blank" : ''; ?>">
                             <?php echo $get_in_touch_link['title']; ?>
                         </a>
-                    <?php endif; ?>
+                    <?php endif; ?> 
                 </div>
             </div>
-            <div class="col-lg-4 col-12 text-center text-lg-start tmb-75">
+            <div class="col-lg-4 col-12 text-center text-lg-start tmb-60">
                 <div class="col-7 mx-auto">
                     <ul class="list-none mb-0 ps-0">
                         <?php if (!empty($footer_links)):
                             foreach ($footer_links as $link):
                                 $links = $link['links'];
                         ?>
-                                <li class="dmb-15">
+                                <li class="dmb-15 tmb-10">
                                     <a href="<?php echo $links['url']; ?>"
-                                        class="sans-normal font14 space0_28 leading22 res-font22 res-leading61 text-decoration-none text-white text-capitalize" target="<?php echo $links["target"] == "_blank" ? "_blank" : ''; ?>">
+                                        class="sans-normal font14 space0_28 leading22 res-font22 res-leading61 res-space-0_44 text-decoration-none text-white text-capitalize" target="<?php echo $links["target"] == "_blank" ? "_blank" : ''; ?>">
                                         <?php echo $links['title']; ?>
                                     </a>
                                 </li>
@@ -124,8 +124,8 @@ $policy_content = get_field('policy_content', 'option');
                     foreach ($policy_content as $policy):
                         $links = $policy['links'];
                 ?>
-                    <li class="d-lg-flex align-items-center text-center ms-lg-5 ">
-                        <a class="sans-normal font12 space0_12 leading16 res-font15 res-leading28 text-decoration-none text-white text-capitalize" href="<?php echo $links['url']; ?>" target="<?php echo $links["target"] == "_blank" ? "_blank" : ';'  ?>">
+                    <li class="d-lg-flex align-items-center text-center ms-lg-5 tmb-25">
+                        <a class="sans-normal font12 space0_12 leading16 res-font15 res-leading28 res-space-0_15 text-decoration-none text-white text-capitalize " href="<?php echo $links['url']; ?>" target="<?php echo $links["target"] == "_blank" ? "_blank" : ';'  ?>">
                             <?php echo $links['title']; ?>
                         </a>
                     </li>
