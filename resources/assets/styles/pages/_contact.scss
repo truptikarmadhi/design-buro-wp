@@ -4,6 +4,8 @@ body.contact {
     }
 }
 .contact-us-section{
+    height: calc(100vh - 200px);
+
     @include media-breakpoint-down(lg){
         height: auto;
     }

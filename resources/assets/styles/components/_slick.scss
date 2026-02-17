@@ -51,7 +51,7 @@
     width: 52px;
     border: 1px solid transparent;
 
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(lg) {
         width: 34px;
         height: 34px;
     }
@@ -62,7 +62,8 @@
 
     &.prev-arrow {
         left: -35px;
-        @include media-breakpoint-down(lg){
+
+        @include media-breakpoint-down(lg) {
             left: -10px;
         }
 
@@ -73,7 +74,8 @@
 
     &.next-arrow {
         right: -35px;
-         @include media-breakpoint-down(lg){
+
+        @include media-breakpoint-down(lg) {
             right: -10px;
         }
 
@@ -127,6 +129,31 @@
                     .related-project-title {
                         transition: opacity 0.3s ease;
                         opacity: 0;
+                    }
+
+
+                    .hover-wrapper {
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(0px);
+                    }
+
+                    &:hover {
+                        .hover-wrapper {
+                            @include media-breakpoint-up(md) {
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(-100%);
+                                opacity: 92%;
+                            }
+                        }
+
+                        .related-project-title {
+                            @include media-breakpoint-up(md) {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
                     }
                 }
 

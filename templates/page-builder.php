@@ -488,60 +488,58 @@
             $contact_no = get_sub_field('contact_no');
             $social_media_content = get_sub_field('social_media_content');
         ?>
-            <section class="contact-us-section bg-06556c h-vh">
-                <div class="dpt-225 dpb-80 tpt-210 tpb-80 d-flex align-items-center w-100">
-                    <div class="container px-p-0">
-                        <div class="row justify-content-between wow animated animate__fadeInUp" data-wow-duration="1.5s">
-                            <div class="col-lg-4 d-flex flex-column justify-content-between">
-                                <div class="col-10 px-p-p">
-                                    <?php if (!empty($title)): ?>
-                                        <div class="sans-medium font61 leading61 res-font45 res-leading45 space-0_61 res-space-0_45 text-white dmb-20"><?php echo $title; ?></div>
-                                    <?php endif; ?>
-                                    <div class="tmb-30 dmb-35 ">
-                                        <?php if (!empty($address['url']) && !empty($address['title'])): ?>
-                                            <a href="<?php echo $address['url']; ?>" target="_blank" class=" text-decoration-none sans-medium font26 leading32 res-font22 res-leading30  text-white">
-                                                <?php echo $address['title']; ?>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
-                                    <?php if (!empty($contact_no)): ?>
-                                        <a class="sans-medium font26 leading32 res-font22 text-white text-decoration-none " target="_blank"
-                                            href="tel:<?php echo $contact_no; ?>">
-                                            <?php echo $contact_no; ?>
-                                        </a>                            
+            <section class="contact-us-section bg-06556c">
+                <div class="container px-p-0">
+                    <div class="row justify-content-between wow animated animate__fadeInUp" data-wow-duration="1.5s">
+                        <div class="col-lg-4 d-flex flex-column justify-content-between">
+                            <div class="col-10 px-p-p">
+                                <?php if (!empty($title)): ?>
+                                    <div class="sans-medium font61 leading61 res-font45 res-leading45 space-0_61 res-space-0_45 text-white dmb-20"><?php echo $title; ?></div>
+                                <?php endif; ?>
+                                <div class="tmb-30 dmb-35 ">
+                                    <?php if (!empty($address['url']) && !empty($address['title'])): ?>
+                                        <a href="<?php echo $address['url']; ?>" target="_blank" class=" text-decoration-none sans-medium font26 leading32 res-font22 res-leading30  text-white">
+                                            <?php echo $address['title']; ?>
+                                        </a>
                                     <?php endif; ?>
                                 </div>
-                                <div class="social-media-content d-flex tmt-40 tpb-95 px-p-p ">
-                                    <?php if (!empty($social_media_content)):
-                                        $contact_group = $social_media_content['contact_group'];
-                                    ?>
-                                        <?php if (!empty($contact_group)):
-                                            foreach ($contact_group as $img_content):
-                                                $image = $img_content['image'];
-                                                $url = $img_content['url'];
-                                        ?>
-                                                <?php if (!empty($url) && !empty($image)): ?>
-                                                    <a href="<?php echo $url; ?>" target="_blank" class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
-                                                            <div class="media-img d-flex justify-content-center align-items-center">
-                                                                <?php if (!empty($image)): ?>
-                                                                    <img class="h-100" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['title']; ?>">
-                                                                <?php endif; ?>
-                                                            </div>
-                                                    </a>
-                                                <?php endif; ?>
-                                        <?php endforeach;
-                                        endif; ?>
-                                    <?php endif; ?>
-                                </div>
-                            <div class="w-100 hr-line" ></div>
+                                <?php if (!empty($contact_no)): ?>
+                                    <a class="sans-medium font26 leading32 res-font22 text-white text-decoration-none " target="_blank"
+                                        href="tel:<?php echo $contact_no; ?>">
+                                        <?php echo $contact_no; ?>
+                                    </a>                            
+                                <?php endif; ?>
                             </div>
-                            <div class="col-lg-8 px-p-p">
-                                <div class="col-lg-11 ps-lg-3 ms-auto">
-                                    <div class="sans-normal font16 leading24 text-edf4f3 dmb-30 tmt-75">
-                                        Send us a message
-                                    </div>
-                                    <?php echo do_shortcode('[contact-form-7 id="a487ced" title="Contact form 1"]') ?>
+                            <div class="social-media-content d-flex tmt-40 tpb-95 px-p-p ">
+                                <?php if (!empty($social_media_content)):
+                                    $contact_group = $social_media_content['contact_group'];
+                                ?>
+                                    <?php if (!empty($contact_group)):
+                                        foreach ($contact_group as $img_content):
+                                            $image = $img_content['image'];
+                                            $url = $img_content['url'];
+                                        ?>
+                                            <?php if (!empty($url) && !empty($image)): ?>
+                                                <a href="<?php echo $url; ?>" target="_blank" class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
+                                                    <div class="media-img d-flex justify-content-center align-items-center">
+                                                        <?php if (!empty($image)): ?>
+                                                            <img class="h-100" src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['title']; ?>">
+                                                        <?php endif; ?>
+                                                    </div>
+                                                </a>
+                                            <?php endif; ?>
+                                        <?php endforeach;
+                                    endif; ?>
+                                <?php endif; ?>
+                             </div>
+                            <div class="w-100 hr-line" ></div>
+                        </div>
+                        <div class="col-lg-8 px-p-p">
+                            <div class="col-lg-11 ps-lg-3 ms-auto">
+                                <div class="sans-normal font16 leading24 text-edf4f3 dmb-30 tmt-75">
+                                    Send us a message
                                 </div>
+                                <?php echo do_shortcode('[contact-form-7 id="a487ced" title="Contact form 1"]') ?>
                             </div>
                         </div>
                     </div>

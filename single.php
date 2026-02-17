@@ -151,6 +151,19 @@ $category = get_the_category();
                                                 <?php echo get_the_title(); ?>
                                             </div>
                                         </div>
+                                         <div class="position-absolute hover-wrapper bg-f07a47 start-0 h-100 w-100 transition">
+                                            <div class="position-absolute bottom-0 px-5 dpb-50">
+                                                <div class="sans-semibold font29 leading22 text-capitalize text-white dmb-10">
+                                                    <?php echo get_the_title(); ?>
+                                                </div>
+                                                <div class="col-10 sans-medium font16 leading27 text-white dmb-20">
+                                                    <?php echo get_the_content(); ?>
+                                                </div>
+                                                <div class="btnA bg-white-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center transition">
+                                                        View more
+                                                </div>
+                                            </div>
+                                        </div>
                                     </a>
                                 </div>
                         <?php endwhile;
