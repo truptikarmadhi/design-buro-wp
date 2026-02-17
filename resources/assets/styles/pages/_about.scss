@@ -20,7 +20,7 @@
     .icon-bg {
       width: 41px;
       height: 41px;
-      border: 1px solid rgba($color: $color-ffffff, $alpha: 0.2);
+      border: 1px solid rgba($color: $white, $alpha: 0.2);
       position: relative;
 
       @include media-breakpoint-down(lg) {

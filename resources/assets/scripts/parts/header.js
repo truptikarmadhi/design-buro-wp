@@ -32,7 +32,6 @@ export class Header {
     jQuery(document).ready(function ($) {
       function handleMenu() {
         if ($(window).width() < 992) {
-          $(".navigation").removeClass("d-flex").addClass("d-none");
           $(".menu-icons")
             .off("click")
             .on("click", function () {

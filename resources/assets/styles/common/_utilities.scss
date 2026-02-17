@@ -2,16 +2,8 @@
     background-color: $color-f07a47;
 }
 
-.bg-ffffff {
-    background-color: $color-ffffff;
-}
-
 .bg-06556c {
     background-color: $color-06556c;
-}
-
-.bg-000000 {
-    background-color: $color-000000;
 }
 
 .bg-000b18 {
@@ -39,16 +31,8 @@
     color: $color-f07a47;
 }
 
-.text-white {
-    color: $color-ffffff;
-}
-
 .text-06556c {
     color: $color-06556c;
-}
-
-.text-000000 {
-    color: $color-000000;
 }
 
 .text-000b18 {
@@ -182,20 +166,20 @@
 }
 
 //letter-space
-.space0_12 {
-    letter-spacing: $space0_12;
+.space-0_12 {
+    letter-spacing: $space-0_12;
 }
 
-.space0_28 {
-    letter-spacing: $space0_28;
+.space-0_28 {
+    letter-spacing: $space-0_28;
 }
 
-.space0_61 {
-    letter-spacing: $space0_61;
+.space-0_61 {
+    letter-spacing: $space-0_61;
 }
 
-.space0_96 {
-    letter-spacing: $space0_96;
+.space-0_96 {
+    letter-spacing: $space-0_96;
 }
 
 //radius
@@ -346,20 +330,20 @@
     }
 
 
-    .res-space0_12 {
-        letter-spacing: $space0_12;
+    .res-space-0_12 {
+        letter-spacing: $space-0_12;
     }
 
-    .res-space0_28 {
-        letter-spacing: $space0_28;
+    .res-space-0_28 {
+        letter-spacing: $space-0_28;
     }
 
-    .res-space0_61 {
-        letter-spacing: $space0_61;
+    .res-space-0_61 {
+        letter-spacing: $space-0_61;
     }
 
-    .res-space0_96 {
-        letter-spacing: $space0_96;
+    .res-space-0_96 {
+        letter-spacing: $space-0_96;
     }
 
 

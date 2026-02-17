@@ -49,10 +49,11 @@ button,
     &.bg-white-btn {
         background-color: $white;
         color: $color-f07a47;
+        border: 1px solid $white;
 
         &:hover {
-            border: 1px solid transparent;
-            color: $color-f07a47;
+            background-color: transparent;
+            color: $white;
         }
     }
 }

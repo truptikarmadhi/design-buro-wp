@@ -6,7 +6,7 @@ $dark_logo = get_field('dark_logo', 'option');
 $header_links = get_field('header_links', 'option');
 $social_icons = get_field('social_icons', 'option');
 $header_select = get_field('header_select');
-$header_color = '';
+$header_color = 'dark-header';
 if ($header_select === 'white-header'){
     $header_color = '';
 }elseif ($header_select === 'dark-header'){
@@ -40,15 +40,15 @@ if ($header_select === 'white-header'){
                 </div>
                 <div class="menu-icons d-flex d-lg-none align-items-center justify-content-center">
                     <div class="menu-icon d-flex">
-                        <img src="<?php echo get_template_directory_uri(); ?>/templates/icons/menu-icon.svg" alt="" class="h-100">
+                        <img src="<?php echo get_template_directory_uri(); ?>/templates/icons/menu-icon.svg" alt="menu-icon" class="h-100">
                     </div>
                     <div class="close-icon d-none">
-                        <img src="<?php echo get_template_directory_uri(); ?>/templates/icons/close-icon.svg" alt="" class="h-100">
+                        <img src="<?php echo get_template_directory_uri(); ?>/templates/icons/close-icon.svg" alt="close-icon" class="h-100">
                     </div>
                 </div>
             </div>
 
-            <nav class="col-12 col-lg-8 navigation d-flex flex-column flex-lg-row justify-content-between justify-content-lg-end align-items-lg-center tpt-75">
+            <nav class="col-12 col-lg-8 navigation d-none d-lg-flex flex-column flex-lg-row justify-content-between justify-content-lg-end align-items-lg-center tpt-75">
                 <ul class="list-none d-flex flex-column flex-lg-row justify-content-lg-end ps-0 mb-0">
                     <?php
                     $current_path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');    

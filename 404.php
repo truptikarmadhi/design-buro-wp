@@ -1,25 +1,15 @@
-
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 text-center">
-
-        <h1 class=" text-center">We're sorry - something has gone wrong.</h1>
-
-          <p class="bold">What could have caused this?</p>
-          <p >
-            Well, something technical went wrong on our site.<br>
-            We might have removed the page.<br>
-            Or the link you clicked might be old and does not work anymore.<br>
-            Or you might have accidentally typed the wrong URL in the address bar.
-          </p>
-          <p class="bold">What can you do?</p>
-          <p>
-            We could take you back to the <strong><a href="/"> home page</a></strong>.<br>
-          </p>
-
-    </div>
+<div class="error-section h-vh d-flex align-items-center justify-content-center">
+    <div class="row">
+        <div class="sans-medium font61 leading61 space-0_96 text-06556c text-center dmb-15">
+          404
+        </div>    
+        <div class="sans-medium font22 leading24 space-0_28 text-06556c text-center dmb-20">
+          Page not found
+        </div>   
+        <div class="d-flex justify-content-center">
+          <a href="<?php echo get_home_url(); ?>" class="btnA bg-f07a47-white-text-btn sans-medium font15 leading61 d-inline-flex justify-content-center align-items-center text-decoration-none transition">
+            back to homepage
+          </a>
+        </div>
+      </div>
   </div>
-
-
-
-
-

@@ -42,18 +42,16 @@ header {
         ul {
             li {
                 &:last-child {
-                    margin-right: 0px;
-                    a{
-                        padding-right: 0 !important;
-                    }
-                    .header-link{
-                        
-                        .is-active{
-                            padding-right: 0 !important;
-                            
+                    margin-right: 0px !important;
+
+                    .header-link {
+                        padding-right: 0px !important;
+
+                        &.is-active {
+                            padding-right: 21px !important;
+
                         }
                     }
-
                 }
 
                 .header-link {
@@ -61,13 +59,14 @@ header {
                     padding-right: 21px;
                     border-radius: 0px $radius30 $radius30 $radius30;
                     color: $white;
+                    transition: all 0.3s ease-in-out;
 
                     @include media-breakpoint-down(lg) {
                         padding-left: 0px;
                         padding-right: 0px;
                         opacity: 50%;
                     }
-                    
+
 
                     &.is-active {
                         color: $white !important;
@@ -77,12 +76,13 @@ header {
                             background-color: transparent !important;
                             opacity: 100%;
                             padding-left: 35px;
+                            color: $color-06556c !important;
                         }
 
                         &::after {
                             content: "";
                             position: absolute;
-                            top: 0;
+                            top: 5px;
                             left: 0;
                             width: 20px;
                             height: 25px;
@@ -116,9 +116,21 @@ header {
                 li {
                     .header-link {
                         color: $color-06556c !important;
+
+                        &.is-active {
+                            color: $white !important;
+
+                            @include media-breakpoint-down(lg) {
+                                color: $color-06556c !important;
+                            }
+                        }
                     }
                 }
             }
+        }
+
+        .menu-icons {
+            background-color: $color-06556c;
         }
     }
 
@@ -132,6 +144,14 @@ header {
                 li {
                     .header-link {
                         color: $color-06556c;
+
+                        &.is-active {
+                            color: $white !important;
+
+                            @include media-breakpoint-down(lg) {
+                                color: $color-06556c !important;
+                            }
+                        }
                     }
                 }
             }

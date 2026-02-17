@@ -8,12 +8,13 @@
 
     .project-image-slider-section {
         .slick-wrap {
-            padding-left: 38px !important;
-            padding-right: 38px !important;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
 
-            @include media-breakpoint-down(lg){
-                 padding-left: 10px !important;
-            padding-right: 10px !important;
+            @include media-breakpoint-down(lg) {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                z-index: 3 !important;
             }
         }
     }

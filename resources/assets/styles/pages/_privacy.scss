@@ -3,10 +3,14 @@
         top: 200px;
 
         li {
+            @include media-breakpoint-down(lg){
+                margin-right: 40px;
+            }
             &.active {
                 a {
                     opacity: 100%;
                     padding-left: 18px;
+                    font-weight: 600 !important;
                 }
 
                 &::before {
@@ -28,6 +32,9 @@
     .policy-content {
         &:first-child {
             padding-top: 0px;
+        }
+        a{
+            color: $color-06556c !important;
         }
     }
 }

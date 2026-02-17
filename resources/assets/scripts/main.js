@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import '@popperjs/core';
 import 'bootstrap/dist/js/bootstrap';
+import "../../node_modules/wow.js";
 
 import { App } from './parts/app.js'
 import { Plugins } from './parts/plugins.js'
@@ -11,7 +12,7 @@ import { Privacy } from './parts/privacy.js';
 import { Video } from './parts/video.js';
 import { Header } from './parts/header.js';
 import { Fancybox } from "@fancyapps/ui";
-
+import WOW from "wow.js";
 // export for others scripts to use
 window.$ = $;
 window.jQuery = jQuery;
@@ -59,3 +60,11 @@ $(function () {
 });
 
 // ===========================================================================
+
+jQuery(document).ready(function ($) {
+  new WOW({
+    boxClass: "wow",
+    once: true,
+    mobile: true,
+  }).init();
+});

@@ -7,13 +7,13 @@ $category = get_the_category();
 ?>
 <div class="bg-edf4f3">
 
-<div class="project-sub-hero-section bg-edf4f3">
+<div class="project-sub-hero-section bg-edf4f3 wow animated animate__fadeIn" data-wow-duration="1.5s">
     <img class="h-100 w-100 object-cover" src=" <?php echo get_the_post_thumbnail_url(); ?>" alt="Hero Image">
 </div>
 
 <section class="project-open-content-section bg-edf4f3 tpt-65 tpb-85 dpt-125 dpb-140">
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row justify-content-between wow animated animate__fadeInUp" data-wow-duration="1.5s">
             <div class="col-lg-4">
                 <?php if (!empty($project_group)):
                     $content_group = $project_group['content_group'];
@@ -47,50 +47,53 @@ $category = get_the_category();
         </div>
     </div>
 </section>
+
 <?php if (!empty($project_image_slider)): ?>
         <?php $image_count = count($project_image_slider); ?>
-    <section class="project-image-slider-section position-relative bg-edf4f3 dmb-90 overflow-hidden">
-        <div class="container">
-            <div class="col-9 col-lg-11 mx-auto">
-                <div class="project-slider">
-                    <?php if (!empty($project_image_slider)) : ?>
-                        <?php foreach ($project_image_slider as $slider) :
-                            $image = $slider['image'];
-                            if (!$image) continue;
-                        ?>
-                                <a href="<?php echo esc_url($image['url']); ?>"
-                                    data-fancybox="project-gallery"
-                                    class="h-100">
-                                    <img
-                                        src="<?php echo esc_url($image['url']); ?>"
-                                        alt="<?php echo esc_attr($image['alt'] ?? 'Project Image'); ?>"
-                                        class="w-100 h-100 object-cover">
-                                </a>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </div>
-            </div>
-            <?php if ($image_count > 3): ?>
-                <div class="slick-wrap position-absolute top-0 start-0 end-0 bottom-0 w-100 h-100 d-flex align-items-center justify-content-between z-3">
-                    <button class="slick-arrows prev-arrow d-flex align-items-center justify-content-center rounded-circle border-0 bg-f07a47">
-                        <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/white-arrow.svg" alt="Slick Arrow">
-                    </button>
-                    <button class="slick-arrows next-arrow d-flex align-items-center justify-content-center rounded-circle border-0 bg-f07a47">
-                        <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/white-arrow.svg" alt="Slick Arrow">
-                    </button>
-                </div>
-            <?php endif; ?>
+    <section class="project-image-slider-section bg-edf4f3 dmb-90">
+        <div class="container wow animated animate__fadeInUp" data-wow-duration="1.5s">
+            <div class="position-relative">
 
+                <div class="col-9 col-lg-11 mx-auto">
+                    <div class="project-slider z-3">
+                        <?php if (!empty($project_image_slider)) : ?>
+                            <?php foreach ($project_image_slider as $slider) :
+                                $image = $slider['image'];
+                                if (!$image) continue;
+                            ?>
+                                    <a href="<?php echo esc_url($image['sizes']['medium']); ?>"
+                                        data-fancybox="project-gallery"
+                                        class="h-100">
+                                        <img
+                                            src="<?php echo esc_url($image['sizes']['medium']); ?>"
+                                            alt="<?php echo esc_attr($image['alt'] ?? 'Project Image'); ?>"
+                                            class="w-100 h-100 object-cover">
+                                    </a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php if ($image_count > 3): ?>
+                    <div class="slick-wrap">
+                        <button class="prev-arrow position-absolute top-50 d-flex align-items-center justify-content-center rounded-circle border-0 bg-f07a47 z-3">
+                            <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/white-arrow.svg" alt="Slick Arrow">
+                        </button>
+                        <button class="next-arrow position-absolute top-50 d-flex align-items-center justify-content-center rounded-circle border-0 bg-f07a47 z-3">
+                            <img class="arrow-bg" src="<?php echo get_template_directory_uri(); ?>/templates/icons/white-arrow.svg" alt="Slick Arrow">
+                        </button>
+                    </div>
+                <?php endif; ?>
+            </div>
         </div>
     </section>
 <?php endif; ?>
 
 <section class="related-project-slider-section bg-edf4f3 overflow-hidden tpb-60 dpb-100">
         <div class="container">
-            <div class="row d-flex tmb-30 dmb-45">
+            <div class="row d-flex align-items-center align-items-lg-end tmb-30 dmb-45 wow animated animate__fadeInUp" data-wow-duration="1.5s">
                 <div class="col-lg-6 col-8">
                     <?php if(!empty($recent_project_title)):?>
-                        <div class="sans-medium font48 leading53 space0_96 res-font30 res-leading32 res-space-0_6 text-06556c p-0">
+                        <div class="col-lg-6 sans-medium font48 leading53 space-0_96 res-font30 res-leading32 res-space-0_6 text-06556c p-0">
                             <?php echo $recent_project_title; ?>
                         </div>
                     <?php endif; ?>
@@ -121,7 +124,7 @@ $category = get_the_category();
                     <a class="btnA bg-06556C-dark-text-btn sans-medium font15 leading61 d-none d-lg-inline-flex justify-content-center align-items-center text-decoration-none transition" href="/project/">View All</a>
                 </div>
             </div>
-                <div class="related-project-slider">
+                <div class="related-project-slider wow animated animate__fadeInUp" data-wow-duration="1.5s">
                         <?php
                         $current_post_id = get_the_ID();
                         $args = array(
@@ -138,12 +141,12 @@ $category = get_the_category();
                         ?>
                                 <div class="position-relative related-project-card radius10 overflow-hidden">
                                     <a href="<?php echo get_permalink(); ?>">
-                                        <div class="related-project-img radius10 overflow-hidden">
+                                        <div class="related-project-img w-100 radius10 overflow-hidden">
                                             <div class="card-layer position-absolute w-100 bottom-0"></div>
                                             <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="w-100 h-100 object-cover"
                                                 alt="Project Image">
                                         </div>
-                                        <div class="related-project-title position-absolute bottom-0 start-0 ms-5 dmb-45 sans-semibold font29 leading22 text-white">
+                                        <div class="related-project-title position-absolute bottom-0 start-0 ms-3 ps-1 ms-lg-5 tmb-20 dmb-45 sans-semibold font29 leading35 text-white">
                                             <div class="">
                                                 <?php echo get_the_title(); ?>
                                             </div>

@@ -13,7 +13,7 @@ $policy_content = get_field('policy_content', 'option');
     <div class="container">
         <div class="d-lg-none d-flex justify-content-center dmb-30">
             <?php if(!empty($logo)):?>
-                <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
             <?php endif;?>
         </div>
         <div class="social-media-content col-lg-2 d-flex d-lg-none justify-content-center tmb-80">
@@ -25,17 +25,15 @@ $policy_content = get_field('policy_content', 'option');
                         $image = $img_content['image'];
                         $url = $img_content['url'];
                 ?>
-                    <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
-                        <?php if (!empty($url)): ?>
-                            <a href="<?php echo $url; ?>" target="_blank">
+                    <?php if (!empty($url)): ?>
+                        <a href="<?php echo $url; ?>" target="_blank" class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
                                 <div class="media-img d-flex justify-content-center align-items-center">
                                     <?php if (!empty($image)): ?>
                                         <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
                                     <?php endif; ?>
                                 </div>
-                            </a>
-                        <?php endif; ?>
-                    </div>
+                        </a>
+                    <?php endif; ?>
                  <?php endforeach;
                     endif; ?>
             <?php endif; ?>
@@ -74,7 +72,7 @@ $policy_content = get_field('policy_content', 'option');
                         ?>
                                 <li class="dmb-15 tmb-10">
                                     <a href="<?php echo $links['url']; ?>"
-                                        class="sans-normal font14 space0_28 leading22 res-font22 res-leading61 res-space-0_44 text-decoration-none text-white text-capitalize" target="<?php echo $links["target"] == "_blank" ? "_blank" : ''; ?>">
+                                        class="sans-normal font14 space-0_28 leading22 res-font22 res-leading61 res-space-0_44 text-decoration-none text-white text-capitalize" target="<?php echo $links["target"] == "_blank" ? "_blank" : ''; ?>">
                                         <?php echo $links['title']; ?>
                                     </a>
                                 </li>
@@ -92,17 +90,15 @@ $policy_content = get_field('policy_content', 'option');
                             $image = $img_content['image'];
                             $url = $img_content['url'];
                     ?>
-                            <div class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
-                                <?php if (!empty($url)): ?>
-                                    <a href="<?php echo $url; ?>" target="_blank">
-                                        <div class="media-img d-flex justify-content-center align-items-center">
-                                            <?php if (!empty($image)): ?>
-                                                <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
-                                            <?php endif; ?>
-                                        </div>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
+                            <?php if (!empty($url)): ?>
+                        <a href="<?php echo $url; ?>" target="_blank" class="media-bg d-flex justify-content-center align-items-center rounded-circle me-2">
+                                <div class="media-img d-flex justify-content-center align-items-center">
+                                    <?php if (!empty($image)): ?>
+                                        <img class="h-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>">
+                                    <?php endif; ?>
+                                </div>
+                        </a>
+                    <?php endif; ?>
                     <?php endforeach;
                     endif; ?>
                 <?php endif; ?>
@@ -110,7 +106,7 @@ $policy_content = get_field('policy_content', 'option');
         </div>
         <div class="d-lg-flex d-none justify-content-end dmb-30">
             <?php if(!empty($logo)):?>
-                <img src="<?php echo $logo['url']; ?>" alt="Social Icon">
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['title']; ?>">
             <?php endif;?>
         </div>
         <div class="d-lg-flex aling-items-center justify-content-between">
@@ -125,7 +121,7 @@ $policy_content = get_field('policy_content', 'option');
                         $links = $policy['links'];
                 ?>
                     <li class="d-lg-flex align-items-center text-center ms-lg-5 tmb-25">
-                        <a class="sans-normal font12 space0_12 leading16 res-font15 res-leading28 res-space-0_15 text-decoration-none text-white text-capitalize " href="<?php echo $links['url']; ?>" target="<?php echo $links["target"] == "_blank" ? "_blank" : ';'  ?>">
+                        <a class="sans-normal font12 space-0_12 leading16 res-font15 res-leading28 res-space-0_15 text-decoration-none text-white text-capitalize " href="<?php echo $links['url']; ?>" target="<?php echo $links["target"] == "_blank" ? "_blank" : ';'  ?>">
                             <?php echo $links['title']; ?>
                         </a>
                     </li>
